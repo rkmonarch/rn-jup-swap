@@ -7,7 +7,7 @@ export async function scanTransaction(tx: string, address: string) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': "bbaed58c-65f6-4d96-812b-713f9b2f12c3",
+                'x-api-key': "",
                 'X-Api-Version': '2023-06-05'
             },
             body: JSON.stringify(
