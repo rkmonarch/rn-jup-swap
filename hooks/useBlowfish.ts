@@ -7,7 +7,7 @@ export async function scanTransaction(tx: string, address: string) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': "",
+                'x-api-key': process.env.EXPO_PUBLIC_BLOWFISH_KEY as string,
                 'X-Api-Version': '2023-06-05'
             },
             body: JSON.stringify(
@@ -21,9 +21,7 @@ export async function scanTransaction(tx: string, address: string) {
                             "enabled": true
                         }
                     }
-
                 }),
-
         }
     );
     const data = await response.json()
